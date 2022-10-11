@@ -53,10 +53,3 @@ variable "fn_version" {
     description = "Function version"
     default     = "1"
 }
-
-variable "cosmos_db_connection_string" {
-    type        = string
-    sensitive   = true
-    description = "CosmoDB Connection string"
-    default     = "null"
-}

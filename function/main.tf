@@ -80,7 +80,6 @@ resource "azurerm_linux_function_app" "this" {
         FUNCTIONS_WORKER_RUNTIME                     = "node"
         WEBSITE_RUN_FROM_PACKAGE_BLOB_MI_RESOURCE_ID = azurerm_user_assigned_identity.this.id
         AzureWebJobsDisableHomepage                  = "true"
-        CosmosDbConnectionString                     = var.cosmos_db_connection_string != "" ? var.cosmos_db_connection_string : ""
     },
     var.app_settings,
     )
